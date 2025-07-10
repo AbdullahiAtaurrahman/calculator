@@ -26,6 +26,14 @@ body {
     height: 64px;
     border: 1px solid black;
     border-radius: 6px;
+    cursor: pointer;
+    align-content: center;
+    text-align: center;
+}
+
+.number:active {
+    transform: scale(1.1);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .clear {
@@ -33,4 +41,6 @@ body {
     width: 128px;
     height: 64px;
     border: 1px solid black;
+    align-content: center;
+    text-align: center;
 }
