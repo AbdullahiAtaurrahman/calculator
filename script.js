@@ -33,4 +33,16 @@ function operate(operator, a, b) {
     
 }
 
+const result = document.querySelector(".display");
+const btns = document.querySelectorAll("button");
 
+result.textContent = "0";
+
+btns.forEach(btn => {
+    btn.addEventListener('click', ()=>{
+
+        result.textContent += btn.innerText;
+        console.log(btn.innerText);
+        
+    })
+})

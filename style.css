@@ -20,11 +20,11 @@ body{
     flex-direction: column;
     border: 24px solid gray;
     border-radius: 12px;
-    padding: 2px;
+    padding: 1px;
 }
 
 .display{
-    height: 64px;
+    height: 72px;
     font-size: 32px;
     background-color: rgb(84, 117, 84);
     width: 100%;
@@ -42,11 +42,14 @@ body{
     width: 100%;
 }
 
-.calc div{
-    width: 33.3333%;
-    font-size: 32px;
+.calc button{
+    width: 25%;
+    font-size: 30px;
     background-color: rgb(0, 170, 255);
     border: 1px solid black;
     padding: 24px;
     text-align: center;
+}
+button:hover{
+    cursor: pointer;
 }
