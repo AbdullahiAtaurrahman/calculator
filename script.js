@@ -11,38 +11,61 @@ const divide = (a, b) => {
     return a / b;
 };
 
-function operate(operator, a, b) {
-    a = Number(a);
-    b = Number(b);
+let num1;
+let num2;
+let operator;
+
+function operate(operator, num1, num2) {
+    // a = Number(a);
+    // b = Number(b);
     switch (operator) {
         case '+':
-            return add(a, b);
+            return add(num1, num2);
         case '-':
-            return subtract(a, b);
+            return subtract(num1, num2);
         case '*':
-            return multiply(a, b);
+            return multiply(num1, num2);
         case '/':
-            if (b === 0) {
+            if (num2 === 0) {
                 return "Error: Division by zero";
             } else {
-                return divide(a, b);
+                return divide(num1, num2);
             }
         default:
             return null;
-    }
-    
+    }  
+};
+
+const display = document.querySelector('.display')
+display.textContent = '0909'
+
+console.log(display);
+
+
+function updateDisplay() {
+    return;
 }
 
-const result = document.querySelector(".display");
-const btns = document.querySelectorAll("button");
+const equals = document.querySelector('.equal');
 
-result.textContent = "0";
+function performOperation() {
+  
 
-btns.forEach(btn => {
-    btn.addEventListener('click', ()=>{
+    if(equals){
+        let result = operate(operator, num1, num2);
+        display.textContent = result;
+    }
 
-        result.textContent += btn.innerText;
-        console.log(btn.innerText);
-        
-    })
-})
+}
+
+function clearDisplay() {
+    display.textContent = '0';
+}
+
+function clearLast() {
+
+if(display.textContent.length >= 2)
+    display.textContent = display.textContent.slice(0,-1)
+console.log('hello');
+
+}
