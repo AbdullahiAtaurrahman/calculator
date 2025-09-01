@@ -3,40 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="calculator">
-      <div class="display"></div>
-      <section class="calc">
-        <button onclick="clearDisplay()">clr</button>
-        <button onclick="clearLast()">del</button>
-        <button>/</button>
-        <button>*</button>
+    <div class="container">
+      <input type="text" id="display" disabled />
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
+      <div class="buttons">
+        <!-- first row -->
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn op" data-value="/">/</button>
 
-        <button onclick="updateDisplay('4')">4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
+        <!-- second row -->
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn op" data-value="x">x</button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>**</button>
+        <!-- third row -->
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn op" data-value="-">-</button>
 
-        <button>0</button>
-        <button onclick="performOperation()">=</button>
-        <button>.</button>
-        <button>%</button>
-      </section>
+        <!-- fourth row -->
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal">=</button>
+        <button class="btn op" data-value="+">+</button>
+
+        <!-- last row -->
+        <button class="btn del">DEL</button>
+        <button class="btn clr">C</button>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
